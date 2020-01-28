@@ -16,9 +16,12 @@
         "lodash": "^4.17.13",
         "resolve-url-loader": "^2.3.1",
         "sass": "^1.15.2",
-        "sass-loader": "^7.1.0"
+        "sass-loader": "^7.1.0",
+        "vue-template-compiler": "^2.6.11"
     },
     "dependencies": {
-        "@github/details-menu-element": "^1.0.6"
+        "@github/details-menu-element": "^1.0.6",
+        "laravel-echo": "^1.6.1",
+        "pusher-js": "^5.0.3"
     }
 }

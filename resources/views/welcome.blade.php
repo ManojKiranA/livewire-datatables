@@ -6,11 +6,21 @@
 
         <script src="https://kit.fontawesome.com/107c56b88c.js" crossorigin="anonymous"></script>
 
-        @livewireAssets
+        {{-- <link href="{{ asset(mix('/css/app.css')) }}" rel="stylesheet" />
+    <script src="{{ asset(mix('/js/app.js')) }}" defer></script> --}}
+
+    @livewireStyles
     </head>
     <body>
-        <div class="container pt-4">
-            @livewire('contacts-table')
+        <div id="app">
+            {{-- @livewire('auto-complete-component') --}}
+            {{-- @livewire('contacts-table') --}}
+            {{-- @livewire('contacts-table-component') --}}
+            {{-- @livewire('contact-form-component') --}}
+            {{-- @livewire('search-posts') --}}
+            {{-- @livewire('s-s-l-certificate') --}}
+            @livewire('convert-case-component')
         </div>
     </body>
+    @livewireScripts
 </html>

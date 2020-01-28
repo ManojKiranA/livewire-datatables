@@ -11,11 +11,11 @@ class CreateContactsTable extends Migration
         Schema::create('contacts', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->string('name');
-            $table->string('email');
-            $table->string('birthdate');
-            $table->string('favorite_color');
-            $table->string('last_contacted_at');
+            $table->string('name')->nullable();
+            $table->string('email')->nullable();
+            $table->string('birthdate')->nullable();
+            $table->string('favorite_color')->nullable();
+            $table->string('last_contacted_at')->nullable();
 
             $table->timestamps();
         });
