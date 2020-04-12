@@ -25,7 +25,7 @@
                 @if (!is_array($sslValue))
                     <td>{{$sslValue}}</td>
                 @elseif(is_array($sslValue))
-                    <td>{{implode($sslValue,', ')}}</td>
+                    <td>{{implode(',',$sslValue)}}</td>
                 @endif
               </tr>
             @endforeach

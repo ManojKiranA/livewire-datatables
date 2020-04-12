@@ -14,15 +14,17 @@
     @livewireStyles
     </head>
     <body>
-        <div id="app">
-            {{-- @livewire('auto-complete-component') --}}
+        <div id="app" class="text-center">
+            {{-- @livewire('auto-complete-component',['user' => new \App\User]) --}}
             {{-- @livewire('contacts-table') --}}
             {{-- @livewire('contacts-table-component') --}}
             {{-- @livewire('contact-form-component') --}}
             {{-- @livewire('search-posts') --}}
             {{-- @livewire('s-s-l-certificate') --}}
             {{-- @livewire('convert-case-component') --}}
-            @livewire(App\Http\Livewire\SSLCertificate::class)
+            {{-- @livewire(App\Http\Livewire\DateTimeFormatCheck::class) --}}
+            @livewire(App\Http\Livewire\DepandDropDown::class)
+            
         </div>
     </body>
     @livewireScripts

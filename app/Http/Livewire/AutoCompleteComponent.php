@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Contact;
+use Illuminate\Support\Facades\Log;
 use Livewire\Component;
 use Illuminate\Support\Str;
 
@@ -13,6 +14,18 @@ class AutoCompleteComponent extends Component
     public $search;
 
     public $results;
+
+    protected $user;
+
+    public function fooBar()
+    {
+        Log::info('hai');
+    }
+
+    public function mount($user = null)
+    {
+        $this->user = $user;
+    }
 
     public function render()
     {

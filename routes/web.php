@@ -1,8 +1,10 @@
 <?php
 
+use App\Contact;
+use Illuminate\Support\Str;
 use App\Events\TestTimeEvent;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
-
 
 /*
 
@@ -393,4 +395,31 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::any('/test',function(){
+  
+  // $pgaginations = Contact::query()
+  //         ->paginate();
+
+        $paginator = Contact::query()
+                        // ->where('manoj','liar')
+                        ->get();
+
+      $paginator
+            ->transform(function (Illuminate\Database\Eloquent\Model $model) {
+              //ypu can manipulte our Model object here
+            $fluentObject = new \Illuminate\Support\Fluent($model->toArray());
+            $fluentObject->role_id =  (int) Arr::random([1,2,3],1)[0];
+
+            if($fluentObject->role_id  === 2){
+              $fluentObject->extraParm =  'this will get passed on';
+            }
+
+            return ($fluentObject);
+      });
+
+return ($paginator);
+  // dd('hai',($pgaginations->getCollection()->map->toArray()));
+
+  dd($pgaginations);
+});
 

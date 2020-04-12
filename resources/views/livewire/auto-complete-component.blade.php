@@ -71,5 +71,5 @@
              </div>
              @endif
           </div>
-        
+       <button wire:click='fooBar'>Test</button> 
 </span>
